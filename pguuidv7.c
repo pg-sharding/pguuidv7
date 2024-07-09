@@ -21,9 +21,6 @@ PG_MODULE_MAGIC;
 /* SQL function: gen_random_uuid() returns uuid */
 PG_FUNCTION_INFO_V1(uuidv7);
 
-
-static bool pg_strong_random(void *buf, size_t len);
-
 /* pg_uuid_t is declared to be struct pg_uuid_t in uuid.h */
 typedef struct pg_uuid_t_v7
 {
@@ -32,7 +29,7 @@ typedef struct pg_uuid_t_v7
 
 
 
-static bool
+bool
 pg_strong_random(void *buf, size_t len)
 {
 	int			i;
