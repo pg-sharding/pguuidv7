@@ -1,0 +1,5 @@
+# pguuidv7 extension
+comment = 'UUIDV7'
+default_version = '1.0'
+module_pathname = '$libdir/pguuidv7'
+relocatable = true
